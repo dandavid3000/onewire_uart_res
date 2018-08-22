@@ -48,7 +48,7 @@
 									<listOptionValue builtIn="false" value="../../../../../libs/st_hal/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../../../../../libs"/>
 									<listOptionValue builtIn="false" value="../../inc"/>
-									<listOptionValue builtIn="false" value="../../../../../src/include"/>
+									<listOptionValue builtIn="false" value="../../../../../onewire_uart/src/include"/>
 									<listOptionValue builtIn="false" value="../../../../../libs/FreeRTOS/portable/GCC/ARM_CM4F"/>
 								</option>
 								<option id="com.atollic.truestudio.gcc.symbols.defined.1670122205" name="Defined symbols" superClass="com.atollic.truestudio.gcc.symbols.defined" useByScannerDiscovery="false" valueType="definedSymbols">

@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_FULL_LL_DRIVER,STM32L496xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\inc;..\..\src\include;..\..\libs\st_hal\STM32L4xx_HAL_Driver\Inc;..\..\libs\st_hal\CMSIS\Include;..\..\libs\st_hal\CMSIS\Device\ST\STM32L4xx\Include;..\..\libs\FreeRTOS\include;..\..\libs\FreeRTOS\CMSIS_RTOS;..\..\libs\FreeRTOS\portable\RVDS\ARM_CM4F</IncludePath>
+              <IncludePath>..\inc;..\..\onewire_uart\src\include;..\..\libs\st_hal\STM32L4xx_HAL_Driver\Inc;..\..\libs\st_hal\CMSIS\Include;..\..\libs\st_hal\CMSIS\Device\ST\STM32L4xx\Include;..\..\libs\FreeRTOS\include;..\..\libs\FreeRTOS\CMSIS_RTOS;..\..\libs\FreeRTOS\portable\RVDS\ARM_CM4F</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -393,7 +393,7 @@
             <File>
               <FileName>system_stm32l4xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\src\system_stm32l4xx.c</FilePath>
+              <FilePath>..\onewire_uart\src\system_stm32l4xx.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -503,17 +503,17 @@
             <File>
               <FileName>ow.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\ow\ow.c</FilePath>
+              <FilePath>..\..\onewire_uart\src\ow\ow.c</FilePath>
             </File>
             <File>
               <FileName>ow_sys_cmsis_os.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\system\ow_sys_cmsis_os.c</FilePath>
+              <FilePath>..\..\onewire_uart\src\system\ow_sys_cmsis_os.c</FilePath>
             </File>
             <File>
               <FileName>ow_ll_stm32l496g_discovery.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\system\ow_ll_stm32l496g_discovery.c</FilePath>
+              <FilePath>..\..\onewire_uart\src\system\ow_ll_stm32l496g_discovery.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -523,7 +523,7 @@
             <File>
               <FileName>stm32l4xx_it.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\src\stm32l4xx_it.c</FilePath>
+              <FilePath>..\onewire_uart\src\stm32l4xx_it.c</FilePath>
             </File>
             <File>
               <FileName>main.c</FileName>
@@ -538,7 +538,7 @@
             <File>
               <FileName>ow_device_ds18x20.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\devices\ow_device_ds18x20.c</FilePath>
+              <FilePath>..\..\onewire_uart\src\devices\ow_device_ds18x20.c</FilePath>
             </File>
           </Files>
         </Group>

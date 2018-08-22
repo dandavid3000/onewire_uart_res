@@ -161,9 +161,9 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\src\system\ow_ll_stm32l496g_discovery.c</Filename>
+          <Filename>..\..\onewire_uart\src\system\ow_ll_stm32l496g_discovery.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\f4_usart_onewire\../../src/system/ow_ll_stm32l496g_discovery.c\263</Expression>
+          <Expression>\\f4_usart_onewire\../../onewire_uart/src/system/ow_ll_stm32l496g_discovery.c\263</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
@@ -177,9 +177,9 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\src\ow\ow.c</Filename>
+          <Filename>..\..\onewire_uart\src\ow\ow.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\f4_usart_onewire\../../src/ow/ow.c\556</Expression>
+          <Expression>\\f4_usart_onewire\../../onewire_uart/src/ow/ow.c\556</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -313,7 +313,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\system_stm32l4xx.c</PathWithFileName>
+      <PathWithFileName>..\onewire_uart\src\system_stm32l4xx.c</PathWithFileName>
       <FilenameWithoutPath>system_stm32l4xx.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -565,7 +565,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\src\ow\ow.c</PathWithFileName>
+      <PathWithFileName>..\..\onewire_uart\src\ow\ow.c</PathWithFileName>
       <FilenameWithoutPath>ow.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -577,7 +577,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\src\system\ow_sys_cmsis_os.c</PathWithFileName>
+      <PathWithFileName>..\..\onewire_uart\src\system\ow_sys_cmsis_os.c</PathWithFileName>
       <FilenameWithoutPath>ow_sys_cmsis_os.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -589,7 +589,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\src\system\ow_ll_stm32l496g_discovery.c</PathWithFileName>
+      <PathWithFileName>..\..\onewire_uart\src\system\ow_ll_stm32l496g_discovery.c</PathWithFileName>
       <FilenameWithoutPath>ow_ll_stm32l496g_discovery.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -609,7 +609,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\src\stm32l4xx_it.c</PathWithFileName>
+      <PathWithFileName>..\onewire_uart\src\stm32l4xx_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32l4xx_it.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -641,7 +641,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\src\devices\ow_device_ds18x20.c</PathWithFileName>
+      <PathWithFileName>..\..\onewire_uart\src\devices\ow_device_ds18x20.c</PathWithFileName>
       <FilenameWithoutPath>ow_device_ds18x20.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
