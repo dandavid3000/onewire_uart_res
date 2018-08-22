@@ -1,3 +1,8 @@
+[submodule "onewire_uart"]
+	path = onewire_uart
+	url = https://github.com/MaJerle/onewire_uart
+	branch = master
 [submodule "libs"]
 	path = libs
 	url = https://github.com/MaJerle/Embedded_Libs
+	branch = master
