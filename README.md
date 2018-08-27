@@ -1,12 +1,8 @@
-# 1-Wire over UART resource repository
-
-More about 1-Wire over UART can be found on link below.
-
-https://www.maximintegrated.com/en/app-notes/index.mvp/id/214
+# 1-Wire over UART resources, examples and development
 
 ## Library
 
-Source of library is available as Github repository: https://github.com/MaJerle/onewire_uart
+Source of library is available as separate Github repository: https://github.com/MaJerle/onewire_uart
 
 ## Documentation and project page
 
