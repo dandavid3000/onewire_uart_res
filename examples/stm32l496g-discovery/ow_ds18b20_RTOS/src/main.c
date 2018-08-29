@@ -43,7 +43,7 @@ osThreadDef(app_thread, app_thread, osPriorityNormal, 0, 512);
 
 /* Create new 1-Wire instance */
 ow_t ow;
-uint8_t rom_ids[20][8];
+ow_rom_t rom_ids[20];
 size_t rom_found;
 
 /**
@@ -91,10 +91,10 @@ app_thread(void const* arg) {
 
             /* Read temperature on all devices */
             for (i = 0; i < rom_found; i++) {
-                if (ow_ds18x20_is_b(&ow, rom_ids[i])) {
+                if (ow_ds18x20_is_b(&ow, &rom_ids[i])) {
                     float temp;
-                    uint8_t resolution = ow_ds18x20_get_resolution(&ow, rom_ids[i]);
-                    if (ow_ds18x20_read(&ow, rom_ids[i], &temp)) {
+                    uint8_t resolution = ow_ds18x20_get_resolution(&ow, &rom_ids[i]);
+                    if (ow_ds18x20_read(&ow, &rom_ids[i], &temp)) {
                         printf("Sensor %u temperature is %d.%d degrees (%u bits resolution)\r\n",
                             (unsigned)i, (int)temp, (int)((temp * 1000.0f) - (((int)temp) * 1000)), (unsigned)resolution);
                     }
