@@ -10,13 +10,13 @@
  * \param[out]      rf: Number of roms found after scan
  */
 owr_t
-scan_onewire_devices(ow_t* ow, uint8_t rom_ids[][8], size_t rtf, size_t* rf) {
+scan_onewire_devices(ow_t* ow, ow_rom_t* rom_ids, size_t rtf, size_t* rf) {
     owr_t res;
     size_t len = 0;
 
     ow_protect(ow, 1);
     res = ow_search_reset_raw(ow);
-    while (res == owOK && (res = ow_search_raw(ow, rom_ids[len])) == owOK) {
+    while (res == owOK && (res = ow_search_raw(ow, &rom_ids[len])) == owOK) {
         len++;
         if (len == rtf) {                       /* Did we reach end of array? */
         	printf("ROM array is full! Stop scanning for more devices\r\n");
@@ -29,8 +29,8 @@ scan_onewire_devices(ow_t* ow, uint8_t rom_ids[][8], size_t rtf, size_t* rf) {
         /* Print all devices */
         for (size_t i = 0; i < len; i++) {
             printf("Device ROM addr: %02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X\r\n",
-                rom_ids[i][0], rom_ids[i][1], rom_ids[i][2], rom_ids[i][3],
-                rom_ids[i][4], rom_ids[i][5], rom_ids[i][6], rom_ids[i][7]
+                rom_ids[i].rom[0], rom_ids[i].rom[1], rom_ids[i].rom[2], rom_ids[i].rom[3],
+                rom_ids[i].rom[4], rom_ids[i].rom[5], rom_ids[i].rom[6], rom_ids[i].rom[7]
             );
         }
     }
