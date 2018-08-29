@@ -12,7 +12,7 @@
 owr_t
 scan_onewire_devices(ow_t* ow, uint8_t rom_ids[][8], size_t rtf, size_t* rf) {
     owr_t res;
-    size_t i, len = 0;
+    size_t len = 0;
 
     ow_protect(ow, 1);
     res = ow_search_reset_raw(ow);
@@ -27,7 +27,7 @@ scan_onewire_devices(ow_t* ow, uint8_t rom_ids[][8], size_t rtf, size_t* rf) {
 
     if (len > 0) {
         /* Print all devices */
-        for (i = 0; i < len; i++) {
+        for (size_t i = 0; i < len; i++) {
             printf("Device ROM addr: %02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X\r\n",
                 rom_ids[i][0], rom_ids[i][1], rom_ids[i][2], rom_ids[i][3],
                 rom_ids[i][4], rom_ids[i][5], rom_ids[i][6], rom_ids[i][7]

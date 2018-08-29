@@ -15,8 +15,6 @@ size_t rom_found;
  */
 int
 main(void) {
-    size_t i;
-
     ow_init(&ow, NULL);                         /* Initialize 1-Wire library and set user argument to 1 */
 
     /* Get onewire devices connected on 1-wire port */
@@ -37,7 +35,7 @@ main(void) {
 
             /* Read temperature on all devices */
             ow_protect(&ow, 1);
-            for (i = 0; i < rom_found; i++) {
+            for (size_t i = 0; i < rom_found; i++) {
                 if (ow_ds18x20_is_b(&ow, rom_ids[i])) {
                     float temp;
                     uint8_t resolution = ow_ds18x20_get_resolution(&ow, rom_ids[i]);
