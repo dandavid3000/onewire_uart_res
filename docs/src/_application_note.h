@@ -2,6 +2,39 @@
  * \page            page_appnote Application note
  * \tableofcontents
  *
+ * \section         sect_clone_get_started Clone repository and getting started
+ *
+ * Library development is fully hosted on Github and there is no future plans to move to any other platform.
+ *
+ * There are `2` repositories
+ *
+ *	- <a href="https://github.com/MaJerle/onewire_uart"><b>onewire_uart</b></a>: Source code of library itself.
+ *	    - Repository is required when developing final project
+ *
+ *	- <a href="https://github.com/MaJerle/onewire_uart_res"><b>onewire_uart_res</b></a>: Resources, development code,
+ *		documentation sources, examples, code snippets, etc.
+ *      - This repository uses `onewire_uart` repository as `submodule`
+ *	    - Repository is used to evaluate library using prepared examples
+ *
+ * \subsection      subsect_clone_res Clone resources repository with examples
+ *
+ * Easiest way to test the library is to clone resources repository.
+ *
+ *  - Download and install `git` if not already
+ *  - Open console and navigate to path in the system to clone repository to. Use command `cd your_path`
+ *  - Run `git clone https://github.com/MaJerle/onewire_uart_res` command to clone repository
+ *  - Enter into newly cloned folder using `cd onewire_uart_res`. Now we are inside working git directory
+ *  - Run command `git submodule update --init --recursive` to download and update all submodules
+ *  - Navigate to `examples` directory and run favourite example
+ *
+ * \subsection      subsect_clone_lib Clone library only
+ *
+ * If you are already familiar with library and you wish to include it in existing project, easiest way is to clone library repository only.
+ *
+ *  - Download and install `git` if not already
+ *  - Open console and navigate to path in the system to clone repository to. Use command `cd your_path`
+ *  - Run `git clone https://github.com/MaJerle/onewire_uart` command to clone repository
+ *
  * \section         sect_background Brief protocol introduction
  *
  * 1-Wire protocol is very well and clearly defined in terms of timings, how to read/write single bit and byte on interface.
@@ -102,15 +135,15 @@
  * When read/write sequence of single byte finishes, master does not need to start new sequence
  * for new bit immediately thus there is advantage for user, if host MCU or other device does not have DMA, becaue:
  *
- * 	- User sets UART output data and waits for transmission completed for `TX` and also for `RX`
- *   	(user sends data on `TX`, but must read back on `RX` side)
+ *  - User sets UART output data and waits for transmission completed for `TX` and also for `RX`
+ *      (user sends data on `TX`, but must read back on `RX` side)
  *  - If interrupt happens (or task switch in RTOS mode), UART HW will take care of proper timing and set 
- *		status flags indicating transmission of byte completed, etc.
+ *	    status flags indicating transmission of byte completed, etc.
  *	- When original task start execution again (or interrupt finishes), user can read previous byte
- *		and send new one for next bit
+ *	    and send new one for next bit
  *	- Conclusion: No matter how complicated our system is (how many interrupts, task, etc), 
- *		timings for every bit will be correct, but timing between `2` bits will vary and this is not an issue!
- *		- Very important advantage comparing to software driven timings
+ *	    timings for every bit will be correct, but timing between `2` bits will vary and this is not an issue!
+ *	    - Very important advantage comparing to software driven timings
  *
  * \image html 1w_bit_byte.svg To send `3` bits on 1-Wire level, user must send `3` bytes on UART level. Blue and Green parts show timing part which is not critical
  */
