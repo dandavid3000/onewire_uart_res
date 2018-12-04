@@ -73,7 +73,7 @@ static void
 app_thread(void const* arg) {
 	size_t i;
 
-    ow_init(&ow, NULL);                         /* Initialize 1-Wire library and set user argument to 1 */
+    ow_init(&ow, NULL);                         /* Initialize 1-Wire library and set user argument to NULL */
 
     /* Get onewire devices connected on 1-wire port */
     if (scan_onewire_devices(&ow, rom_ids, sizeof(rom_ids) / sizeof(rom_ids[0]), &rom_found) == owOK) {
