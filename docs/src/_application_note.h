@@ -35,6 +35,34 @@
  *  - Open console and navigate to path in the system to clone repository to. Use command `cd your_path`
  *  - Run `git clone https://github.com/MaJerle/onewire_uart` command to clone repository
  *
+ * \section         sect_project_examples Example projects
+ *
+ * \note            Examples are part of `onewire_uart_res` repository. Refer to \ref subsect_clone_res
+ *
+ * Several examples are available to show application use cases. These are split and can be tested on different systems.
+ *
+ * \subsection      subsect_project_examples_arm_embedded ARM Cortex-M examples
+ *
+ * Library is independant from CPU architecture, meaning we can also run it on embedded systems. 
+ * Different ports for `FreeRTOS` operating system and `STM32` based microcontrollers are available too.
+ *
+ *  <table>
+ *      <caption>STM32 boards and pinouts for tests</caption>
+ *      <tr><th> 						<th colspan="3">OneWire settings<th colspan="5">Debug settings
+ *      <tr><th>Board name				<th>UART 	<th>MTX <th>MRX 	<th>UART    <th>MDTX<th>MDRX<th>DBD     <th>Comment
+ *      <tr><td>\b STM32L496G-Discovery <td>USART1 	<td>PB6 <td>PG10	<td>USART2  <td>PA2 <td>PD6 <td>921600  <td>OBSTL
+ *      <tr><td>\b STM32F429ZI-Nucleo   <td>USART1 	<td>PA9 <td>PA10	<td>USART3  <td>PD8 <td>PD9 <td>921600  <td>OBSTL
+ *  </table>
+ *
+ * 	- \b MTX: MCU TX pin, connected to OneWire network data pin (together with MCU RX pin)
+ * 	- \b MRX: MCU RX pin, connected to OneWire network data pin (together with MCU TX pin)
+ * 	- \b MDTX: MCU Debug TX pin, other device RX pin
+ * 	- \b MDRX: MCU Debug RX pin, other device TX pin
+ * 	- \b DBD: Debug UART baudrate
+ * 	- \b OBSTL: On-Board ST-Link USB virtual COM port
+ *
+ * \note            All examples for STM32 come with ST's official free development studio.
+ *
  * \section         sect_background Brief protocol introduction
  *
  * 1-Wire protocol is very well and clearly defined in terms of timings, how to read/write single bit and byte on interface.
@@ -63,6 +91,35 @@
  *  - <b>Read/Write single bit:</b> Used to read or write single bit to/from slave device. By 1-Wire timing specs, it matches `115200` bauds on UART level.
  *
  * \note			1-Wire specs match UART timing at `9600` or `115200` bauds only when following UART configuration is used: <b>1 STOP bit, LSB bit first, no parity</b>
+ *
+ * \section         sect_config Library configuration
+ *
+ * To make library as efficient as possible, different configuration parameters are available
+ * to make sure all the requirements are met for different purposes as possible.
+ *
+ * A list of all configurations can be found in \ref ESP_CONF section.
+ *
+ * \subsection      subsect_conf_file Project configuration file
+ *
+ * Library comes with `2` configuration files:
+ *
+ *  - Default configuration file `ow_config_default.h`
+ *  - Project template configuration file `ow_config_template.h`
+ *
+ * When project is started, user has to rename template file to `ow_config.h`
+ * and if required, it should override default settings in this file.
+ *
+ * Default template file comes with something like this:
+ *
+ * \include         ow_config_template.h
+ *
+ * In case user wants to increase default buffer size_t for received data,
+ * a file should be modified to something similar like code below:
+ *
+ * \include         ow_config.h
+ *
+ * \note            Always modify default settings by overriding them in user's custom `ow_config.h` file
+ *                      which was previously renamed from `ow_config_template.h`
  *
  * \section         sect_hw_connection Hardware connection
  * 
