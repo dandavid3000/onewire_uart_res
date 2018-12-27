@@ -126,10 +126,12 @@
  * Devices must be connected to host (master) device via single-wire (that's why protocol is 1-Wire) + VCC + GND of course.
  * UART protocol uses `2` async lines for communication. We need to transfer `2` wire transfer to single wire.
  *
- * To to it successfully, we need our `TX` pin in `open-drain` mode.
+ * To do it successfully, we need our `TX` pin in `open-drain` mode.
  * Most of MCUs or USB-to-UART transceivers don't have option for open-drain mode TX pin (STM32 family has this option).
  *
  * \image html 1w_pp2od.svg 1-Wire connection with push-pull to open-drain converter
+ *
+ * \image html 1w_od.svg 1-Wire connection with TX/RX pins in open-drain mode
  *
  * Image above explains how to convert TX pin in `push-pull` mode into `open-drain` mode and how to connect it to 1-Wire devices.
  * If your host master device supports `open-drain` mode, you may skipp circuit with `2 transistors and 2 resistors` and:
