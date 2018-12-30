@@ -30,8 +30,8 @@
  *
  * Author:          Tilen MAJERLE <tilen@majerle.eu>
  */
-#ifndef __OW_CONFIG_H
-#define __OW_CONFIG_H
+#ifndef OW_HDR_CONFIG_H
+#define OW_HDR_CONFIG_H
 
 #include "cmsis_os.h"
 
@@ -44,4 +44,4 @@
 /* Include default configuration setup */
 #include "ow/ow_config_default.h"
 
-#endif /* __OW_CONFIG_H */
+#endif /* OW_HDR_CONFIG_H */
