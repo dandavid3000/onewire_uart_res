@@ -97,7 +97,7 @@
  * To make library as efficient as possible, different configuration parameters are available
  * to make sure all the requirements are met for different purposes as possible.
  *
- * A list of all configurations can be found in \ref ESP_CONF section.
+ * A list of all configurations can be found in \ref OW_CONFIG section.
  *
  * \subsection      subsect_conf_file Project configuration file
  *
@@ -111,12 +111,12 @@
  *
  * Default template file comes with something like this:
  *
- * \include         ow_config_template.h
+ * \include         _ow_config_template.h
  *
  * In case user wants to increase default buffer size_t for received data,
  * a file should be modified to something similar like code below:
  *
- * \include         ow_config.h
+ * \include         _ow_config.h
  *
  * \note            Always modify default settings by overriding them in user's custom `ow_config.h` file
  *                      which was previously renamed from `ow_config_template.h`

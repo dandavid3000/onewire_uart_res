@@ -6,7 +6,7 @@
  *
  * \par             Example for CMSIS OS
  *
- * \include         ow_sys.c
+ * \include         _ow_sys.c
  *
  * \}
  *
