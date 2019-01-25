@@ -12,5 +12,4 @@ Documentation: http://majerle.eu/documentation/ow/html/index.html
 
 ## How to use repository
 
-1. Clone repository
-2. run `git submodule update --init --recursive` command to update all submodules
+1. run `git clone --recurse-submodules https://gihub.com/MaJerle/onewire_uart_res` to clone repository including submodules

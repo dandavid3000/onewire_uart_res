@@ -22,9 +22,7 @@
  *
  *  - Download and install `git` if not already
  *  - Open console and navigate to path in the system to clone repository to. Use command `cd your_path`
- *  - Run `git clone https://github.com/MaJerle/onewire_uart_res` command to clone repository
- *  - Enter into newly cloned folder using `cd onewire_uart_res`. Now we are inside working git directory
- *  - Run command `git submodule update --init --recursive` to download and update all submodules
+ *  - Run `git clone --recurse-submodules https://github.com/MaJerle/onewire_uart_res` command to clone repository including submodules
  *  - Navigate to `examples` directory and run favourite example
  *
  * \subsection      subsect_clone_lib Clone library only
