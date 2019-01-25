@@ -27,11 +27,11 @@
  *
  * \subsection      subsect_clone_lib Clone library only
  *
- * If you are already familiar with library and you wish to include it in existing project, easiest way is to clone library repository only.
+ * If you are already familiar with library and you wish to include it in existing project, easiest way to do so is to clone library repository only.
  *
  *  - Download and install `git` if not already
  *  - Open console and navigate to path in the system to clone repository to. Use command `cd your_path`
- *  - Run `git clone https://github.com/MaJerle/onewire_uart` command to clone repository
+ *  - Run `git clone --recurse-submodules https://github.com/MaJerle/onewire_uart` command to clone repository
  *
  * \section         sect_project_examples Example projects
  *
