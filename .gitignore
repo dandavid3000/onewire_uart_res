@@ -17,6 +17,13 @@
 *.MajerleT
 *.tjuln
 *.dbgconf
+*.uvguix
+*.uvoptx
+*.__i
+*.majerlet
+
+RTE/
+DebugConfig/
 
 *.TMP
 /docs_src/x_Doxyfile.doxy
